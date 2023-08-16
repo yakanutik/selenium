@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Simple">
+
+    <test name="Search/Login">
+
+        <groups>
+            <define name="All"/>
+            <define name="Smoke"/>
+            <define name="Neg"/>
+            <run>
+                <include name="All"/>
+                <include name="Smoke"/>
+                <include name="Neg"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="SearchTest"/>
+            <class name="LoginTest"/>
+        </classes>
+    </test>
+</suite>

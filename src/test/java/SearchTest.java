@@ -4,19 +4,16 @@ import po.SearchPage;
 
 import static org.testng.AssertJUnit.assertEquals;
 
-public class MainTest extends BaseTest {
+public class SearchTest extends BaseTest {
 
-    SearchPage basePage = new SearchPage();
-    LogInPage logInPage = new LogInPage();
-
-    @Test
+    @Test(groups = {"Smoke"})
     public void verifyLogInName() {
         String expected = "Ithillel";
         String actual;
 
-        basePage.clickLogInTab();
-        logInPage.logInToWiki();
-        actual = basePage.getUserName();
+        new SearchPage().clickLogInTab();
+        new LogInPage().logInToWiki();
+        actual = new SearchPage().getUserName();
 
         assertEquals("Actual should be equal to expected", expected, actual);
     }
