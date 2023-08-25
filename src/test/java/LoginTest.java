@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 import po.LogInPage;
 import po.SearchPage;
 
+import static config.WebDriverInit.getDriver;
 import static org.testng.AssertJUnit.assertEquals;
 
 public class LoginTest extends BaseTest {
@@ -12,6 +13,10 @@ public class LoginTest extends BaseTest {
 
     @Test(groups = {"Smoke"})
     public void verifyLogInPage() {
+        String baseUrl = "https://en.wikipedia.org/";
+        driver = getDriver();
+        driver.get(baseUrl);
+        driver.manage().window().maximize();
         new LogInPage()
                 .clickLogIn();
 
@@ -29,6 +34,10 @@ public class LoginTest extends BaseTest {
 
     @Test(groups = {"Neg"}, dataProvider = "invalidLogin")
     public void verifyErrorMessageLogInPage(String user, String pass, String error) {
+        String baseUrl = "https://en.wikipedia.org/";
+        driver = getDriver();
+        driver.get(baseUrl);
+        driver.manage().window().maximize();
         new LogInPage()
                 .clickLogIn();
 

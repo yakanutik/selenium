@@ -10,10 +10,7 @@ public class BaseTest {
 
     @BeforeMethod(groups = {"All", "Smoke", "Neg"})
     public void setUp() {
-        String baseUrl = "https://en.wikipedia.org/";
         driver = getDriver();
-        driver.get(baseUrl);
-        driver.manage().window().maximize();
     }
 
     @AfterMethod(groups = {"All", "Smoke", "Neg"})
