@@ -1,20 +1,21 @@
-package base;
+package selenium.base;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import selenium.config.WebDriverInit;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static config.WebDriverInit.getDriver;
+import static java.time.Duration.ofSeconds;
 
 public class BaseMethod {
 
     protected WebDriverWait getWait() {
-        return new WebDriverWait(getDriver(), 10);
+        return new WebDriverWait(WebDriverInit.getDriver(), ofSeconds(10));
     }
 
     protected void findElementAndSetText(By locator, String search) {

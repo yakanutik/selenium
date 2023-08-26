@@ -1,6 +1,6 @@
-package po;
+package selenium.po;
 
-import base.BaseMethod;
+import selenium.base.BaseMethod;
 import org.openqa.selenium.By;
 
 import java.util.List;
