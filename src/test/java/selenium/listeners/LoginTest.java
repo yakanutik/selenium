@@ -6,7 +6,9 @@ import org.testng.annotations.Test;
 import selenium.po.LogInPage;
 import selenium.po.SearchPage;
 
+
 import static org.testng.AssertJUnit.assertEquals;
+import static selenium.config.WebDriverInit.getDriver;
 
 public class LoginTest extends BaseTest {
     private final String validUsername = "Ithillel";
@@ -14,6 +16,10 @@ public class LoginTest extends BaseTest {
 
     @Test(groups = {"Smoke"})
     public void verifyLogInPage() {
+        String baseUrl = "https://en.wikipedia.org/";
+        driver = getDriver();
+        driver.get(baseUrl);
+        driver.manage().window().maximize();
         new LogInPage()
                 .clickLogIn();
 
@@ -31,6 +37,10 @@ public class LoginTest extends BaseTest {
 
     @Test(groups = {"Neg"}, dataProvider = "invalidLogin")
     public void verifyErrorMessageLogInPage(String user, String pass, String error) {
+        String baseUrl = "https://en.wikipedia.org/";
+        driver = getDriver();
+        driver.get(baseUrl);
+        driver.manage().window().maximize();
         new LogInPage()
                 .clickLogIn();
 
