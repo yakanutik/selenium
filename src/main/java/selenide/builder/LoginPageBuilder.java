@@ -1,24 +1,24 @@
-package builder;
+package selenide.builder;
 
-import po.LogInPage;
+import selenide.po.LoginPage;
 
 public class LoginPageBuilder {
 
     private String user;
     private String pass;
 
-    public LoginPageBuilder withUsername(String username) {
+    public selenide.builder.LoginPageBuilder withUsername(String username) {
         this.user = username;
         return this;
     }
 
-    public LoginPageBuilder withPassword(String password) {
+    public selenide.builder.LoginPageBuilder withPassword(String password) {
         this.pass = password;
         return this;
     }
 
-    public LogInPage build() {
-        return new LogInPage()
+    public LoginPage build() {
+        return new LoginPage()
                 .enterUsername(user)
                 .enterPassword(pass);
     }

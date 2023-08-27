@@ -1,6 +1,6 @@
-package builder;
+package selenium.builder;
 
-import po.GooglePage;
+import selenium.po.GooglePage;
 
 public class GooglePageBuilder {
 

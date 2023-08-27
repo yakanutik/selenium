@@ -1,10 +1,13 @@
+package selenium.listeners;
+
 import org.assertj.core.api.SoftAssertions;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
-import po.ActionsPage;
+import selenium.po.ActionsPage;
 
-import static config.WebDriverInit.getDriver;
+
 import static org.assertj.core.api.Assertions.assertThat;
+import static selenium.config.WebDriverInit.getDriver;
 
 
 public class ActionsTest extends BaseTest {

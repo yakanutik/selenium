@@ -1,4 +1,6 @@
-import builder.GooglePageBuilder;
+package selenium.listeners;
+
+import selenium.builder.GooglePageBuilder;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -7,8 +9,8 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-import static config.WebDriverInit.closeDriver;
-import static config.WebDriverInit.getDriver;
+import static selenium.config.WebDriverInit.closeDriver;
+import static selenium.config.WebDriverInit.getDriver;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class GoogleTest {

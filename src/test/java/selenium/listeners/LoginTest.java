@@ -1,11 +1,14 @@
-import builder.LoginPageBuilder;
+package selenium.listeners;
+
+import selenium.builder.LoginPageBuilder;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import po.LogInPage;
-import po.SearchPage;
+import selenium.po.LogInPage;
+import selenium.po.SearchPage;
 
-import static config.WebDriverInit.getDriver;
+
 import static org.testng.AssertJUnit.assertEquals;
+import static selenium.config.WebDriverInit.getDriver;
 
 public class LoginTest extends BaseTest {
     private final String validUsername = "Ithillel";

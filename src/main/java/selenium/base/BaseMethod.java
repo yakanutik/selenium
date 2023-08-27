@@ -1,4 +1,4 @@
-package base;
+package selenium.base;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -6,16 +6,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import selenium.config.WebDriverInit;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static config.WebDriverInit.getDriver;
+import static java.time.Duration.ofSeconds;
+import static selenium.config.WebDriverInit.getDriver;
 
 public class BaseMethod {
 
     protected WebDriverWait getWait() {
-        return new WebDriverWait(getDriver(), 10);
+        return new WebDriverWait(getDriver(), ofSeconds(10));
     }
 
     protected Actions getAction() {

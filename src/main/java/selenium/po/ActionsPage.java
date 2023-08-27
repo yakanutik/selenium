@@ -1,9 +1,10 @@
-package po;
+package selenium.po;
 
-import base.BaseMethod;
-import base.Table;
+import selenium.base.BaseMethod;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import selenium.base.Table;
 
 
 public class ActionsPage extends BaseMethod {

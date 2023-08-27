@@ -15,8 +15,8 @@
             </run>
         </groups>
         <classes>
-            <class name="SearchTest"/>
-            <class name="LoginTest"/>
+            <class name="selenium.SearchTest"/>
+            <class name="selenium.LoginTest"/>
         </classes>
     </test>
 </suite>
